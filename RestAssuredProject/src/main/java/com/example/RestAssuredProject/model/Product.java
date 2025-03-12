@@ -27,6 +27,6 @@ public class Product {
 
     private String category;
 
-    @Column(length = 5000) // Allow long descriptions
+    @Column(length = 1000) // Allow long descriptions
     private String description;
 }

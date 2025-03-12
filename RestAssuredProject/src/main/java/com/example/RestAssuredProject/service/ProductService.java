@@ -38,4 +38,26 @@ public class ProductService {
         }
         return productRepository.saveAll(products);
     }
+
+    public Optional<Product> getProductById(Long id) {
+        return productRepository.findById(id);
+    }
+
+    public List<Product> getAllProducts() {
+        return productRepository.findAll();
+    }
+
+    public Product updateProduct(Product product) {
+        return productRepository.save(product);
+    }
+
+    public boolean deleteProduct(Long id) {
+        Optional<Product> productOpt = productRepository.findById(id);
+        if (productOpt.isPresent()) {
+            productRepository.deleteById(id);
+            return true;
+        }
+        return false; // Product not found
+    }
+
 }

@@ -1,8 +1,12 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="RestAssured Test Suite">
-    <test name="API Tests">
+<suite name="E-commerce API Suite">
+    <test name="Product API Tests">
         <classes>
+            <class name="com.example.RestAssuredProject.Api.EmptyProductTest"/>
             <class name="com.example.RestAssuredProject.Api.ProductTestApi"/>
+            <class name="com.example.RestAssuredProject.Api.UpdateProductTests"/>
+            <class name="com.example.RestAssuredProject.Api.DeleteProductTest"/>
         </classes>
     </test>
+
 </suite>
